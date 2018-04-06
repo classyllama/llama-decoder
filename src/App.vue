@@ -1,28 +1,33 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <llama-decoder />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LlamaDecoder from './components/LlamaDecoder.vue';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
-  }
-}
+    LlamaDecoder,
+  },
+};
 </script>
 
 <style lang="scss">
+html,
+body,
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  height: 100%;
+}
+#app {
+  display: flex;
+  background: #333;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
 }
 </style>
