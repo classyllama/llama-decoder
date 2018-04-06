@@ -5,7 +5,8 @@
   "scripts": {
     "start": "yarn serve",
     "serve": "vue-cli-service serve --open",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "register-service-worker": "^1.0.0",
