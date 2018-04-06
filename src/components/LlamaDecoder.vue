@@ -225,6 +225,13 @@ input {
   }
 }
 
+a:not(.btn) {
+  color: $cl-teal;
+  &:hover {
+    color: $cl-teal-lighter;
+  }
+}
+
 .glitch {
   color: white;
   font-size: 100px;
