@@ -102,12 +102,14 @@ export default {
       let D = this.lname ? this.lname.charCodeAt() : 1;
       let d = new Date();
       let E = parseFloat(d.getMonth(), 10) + 1;
-      let F = parseFloat(d.getDay(), 10) + 1;
+      let F = parseFloat(d.getDate(), 10);
       let G = parseFloat(d.getFullYear(), 10);
       let J = this.notesNum;
-      let L = this.projectName ? this.projectName.charCodeAt() : 1;
+      let L = this.projectName
+        ? this.projectName.toUpperCase().charCodeAt()
+        : 1;
       let M = this.fileNum;
-      return Math.ceil(C * D / E * F / G * J * L - M);
+      return Math.round(C * D / E * F / G * J * L - M);
     },
     recordFound() {
       return POST_IDS.indexOf(this.pid) !== -1;
