@@ -34,17 +34,20 @@
         <div v-if="step == 2" class="form-group text-center">
           <p v-if="recordFound">Confirmed. Scanning your network...</p>
           <div v-if="!recordFound">
-            <p>Confirmation code is invalid.</p>
+            <h1>Confirmation code is invalid.</h1>
+            <pre><code>{{ pid }}</code></pre>
             <p><a href="#" @click.prevent="loadStep(step0, 'Loading...')">Try again</a></p>
           </div>
         </div>
         <div v-if="step == 3" class="form-group text-center">
           <div v-if="recordFound">
             <h1>Tracking source discovered!</h1>
-            <p><a :href="redirect" @click.prevent="loadStep(step4, 'Redirecting...')">Reveal the suspected source</a></p>
+            <pre><code>id: {{ pid }}</code></pre>
+            <h4>View suspected source at <a :href="redirect" @click.prevent="loadStep(step4, 'Redirecting...')">classyllama.com?p={{ pid }}</a></h4>
           </div>
           <div v-if="!recordFound">
             <p>Unable to find any tracking source.</p>
+            <pre><code>{{ pid }}</code></pre>
             <p><a href="#" @click.prevent="loadStep(step0, 'Loading...')">Try again</a></p>
           </div>
         </div>
@@ -64,6 +67,10 @@ function findGetParameter(parameterName) {
   }
   return result;
 }
+
+const DELAY = 2000;
+// const DELAY = 0;
+const POST_IDS = [7868, 7944];
 
 export default {
   name: 'LlamaDecoder',
@@ -88,7 +95,7 @@ export default {
       } else {
         this.accessDenied = true;
       }
-    }, 3000);
+    }, DELAY);
   },
   computed: {
     fname() {
@@ -124,7 +131,7 @@ export default {
       this.loadText = loadText || this.loadText;
       setTimeout(() => {
         func.bind(this)();
-      }, 2000);
+      }, DELAY);
     },
     step0() {
       this.fileNum = null;
@@ -139,15 +146,13 @@ export default {
       this.step = 2;
       setTimeout(() => {
         if (this.recordFound) this.step = 3;
-      }, 4000);
+      }, DELAY * 2);
     },
     step4() {
       window.location.href = this.redirect;
     },
   },
 };
-
-const POST_IDS = [7868];
 </script>
 
 <style scoped lang="scss">
@@ -232,6 +237,17 @@ a:not(.btn) {
   &:hover {
     color: $cl-teal-lighter;
   }
+}
+
+.text-muted {
+  color: $gray-lighter !important;
+  font-size: 16px;
+}
+
+code {
+  color: #fff;
+  font-size: 28px;
+  font-family: monospace;
 }
 
 .glitch {
