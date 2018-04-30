@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.0.1/workbox-sw.js");
 
 importScripts(
-  "/llama-decoder/precache-manifest.5d41efc98b727d4d55165fdff8791897.js"
+  "/llama-decoder/precache-manifest.85a97dbbaecd45ef91721bb11c286fc9.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "llama-decoder"});
