@@ -29,5 +29,6 @@ body,
   justify-content: center;
   font-family: Arial, sans-serif;
   font-size: 16px;
+  padding: 10px;
 }
 </style>
