@@ -70,7 +70,11 @@ function findGetParameter(parameterName) {
 
 const DELAY = 2000;
 // const DELAY = 0;
-const POST_IDS = [7868, 7944];
+const POST_IDS = [
+  7868, // Amy
+  7944, // Greg G
+  8742, // Greg J
+];
 
 export default {
   name: 'LlamaDecoder',
