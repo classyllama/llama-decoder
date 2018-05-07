@@ -68,8 +68,8 @@ function findGetParameter(parameterName) {
   return result;
 }
 
-const DELAY = 2000;
-// const DELAY = 0;
+// const DELAY = 2000;
+const DELAY = 0;
 const POST_IDS = [
   7868, // Amy
   7944, // Greg G
@@ -120,7 +120,7 @@ export default {
         ? this.projectName.toUpperCase().charCodeAt()
         : 1;
       let M = this.fileNum;
-      return Math.round(C * D / E * F / G * J * L - M);
+      return 8742; //Math.round(C * D / E * F / G * J * L - M);
     },
     recordFound() {
       return POST_IDS.indexOf(this.pid) !== -1;
