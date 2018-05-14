@@ -8,15 +8,15 @@ self.__precacheManifest = [
     "url": "/llama-decoder/js/manifest.d5261d0f.js"
   },
   {
-    "revision": "cae6b49f36067d0fa38d",
-    "url": "/llama-decoder/js/app.cae6b49f.js"
+    "revision": "95b2d2c1ede23ccba243",
+    "url": "/llama-decoder/js/app.95b2d2c1.js"
   },
   {
-    "revision": "1218a770338e0b5efac4ca4bafcaa593",
+    "revision": "c3ff48df5232ca7db62915dbf6cf36fd",
     "url": "/llama-decoder/index.html"
   },
   {
-    "revision": "cae6b49f36067d0fa38d",
-    "url": "/llama-decoder/css/app.62d102e6.css"
+    "revision": "95b2d2c1ede23ccba243",
+    "url": "/llama-decoder/css/app.0f4fc646.css"
   }
 ];
