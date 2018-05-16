@@ -75,6 +75,7 @@ const POST_IDS = [
   7944, // Greg G
   8742, // Greg J
   6061, // Paul E
+  8866, // Chad T
 ];
 
 export default {
