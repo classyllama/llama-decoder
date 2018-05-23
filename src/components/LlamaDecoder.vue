@@ -71,11 +71,69 @@ function findGetParameter(parameterName) {
 const DELAY = 2000;
 // const DELAY = 0;
 const POST_IDS = [
-  7868, // Amy
-  7944, // Greg G
-  8742, // Greg J
-  6061, // Paul E
-  8866, // Chad T
+  8896, // Chris Foley
+  8866, // Chad Turner
+  8836, // Pierson Kellogg
+  8804, // Emily Johns
+  8769, // Stephen Biston
+  8767, // Jared Burgess
+  8745, // Joe Langford
+  8742, // Greg Johnson
+  8682, // Josh Good
+  8623, // Jon Richards
+  8478, // Audrey Adkins
+  7986, // Jeremy Turner
+  7989, // Miguel Solano
+  7979, // Preston Choate
+  7966, // Shawn Brandwein
+  7980, // Sean Templeton
+  7977, // Timothy Rhodes
+  7974, // Francois Muller
+  7968, // Noelle Missant
+  7967, // Ashley Gates
+  7964, // Nichele Cantrell
+  7944, // Greg Goodale
+  7891, // Austin Wakeman
+  7868, // Amy Sisco
+  7751, // Rob Young
+  6065, // Jonathan Hodges
+  6092, // Eric Wiese
+  6091, // Brandon Urich
+  6090, // Julia Turnage
+  6089, // Mike Tull
+  6088, // Brendan Tull
+  6087, // Nathan Toombs
+  6086, // Kurt Theobald
+  6085, // Matthew Swinney
+  6084, // Richard Sisco
+  6083, // Aaron Sheehan
+  6082, // Curtis Schrum
+  6081, // Katy Rudy
+  6080, // Nylah Rogers
+  6079, // Adam Prost
+  6078, // Jordan Phillips
+  6075, // Zach Nanninga
+  6074, // Gino Nanninga
+  6073, // Chris Nanninga
+  6076, // Dalton Marler
+  6070, // Ben Leach
+  6068, // Matt Johnson
+  6067, // Chris Huffman
+  6066, // Perry Holden
+  6064, // Larry Goodhue
+  6063, // Konstantin Filippov
+  6062, // Michael Eck
+  6061, // Paul Ebisch
+  6060, // Allison Duncan
+  6059, // Josh Courville
+  6058, // Jayme McCrimmons
+  6056, // Alexey Bordachyov
+  6053, // Zach Allgood
+  6052, // David Alger
+  6051, // Erik Hansen
+  6047, // Ashlee Colliver
+  242, // Rob Tull
+  236, // Kevin Kirchner
 ];
 
 export default {
