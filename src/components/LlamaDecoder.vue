@@ -53,6 +53,9 @@
             <p><a href="#" @click.prevent="loadStep(step0, 'Loading...')">Try again</a></p>
           </div>
         </div>
+        <div v-if="step == 4" :class="['iframe-wrapper', {'reveal': reveal}]">
+          <iframe :src="redirect" frameborder="0"></iframe>
+        </div>
       </form>
     </div>
   </div>
@@ -152,6 +155,7 @@ export default {
       projectName: null,
       loadText: 'Loading...',
       xz12yk: findGetParameter('xz12yk'),
+      reveal: false,
     };
   },
   created() {
@@ -215,7 +219,11 @@ export default {
       }, DELAY * 2);
     },
     step4() {
-      window.location.href = this.redirect;
+      this.step = 4;
+      setTimeout(() => {
+        this.reveal = true;
+      }, DELAY);
+      // window.location.href = this.redirect;
     },
   },
 };
@@ -314,6 +322,26 @@ code {
   color: #fff;
   font-size: 28px;
   font-family: monospace;
+}
+
+.iframe-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  iframe {
+    transition: height 18s linear;
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  &.reveal {
+    iframe {
+      height: 100%;
+    }
+  }
 }
 
 .glitch {
