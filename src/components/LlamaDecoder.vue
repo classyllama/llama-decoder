@@ -10,6 +10,7 @@
       <form>
         <div v-if="step == -1">{{ loadText }}</div>
         <div v-if="step == 0">
+          <h2 class="text-center mb-3">Verify your identity</h2>
           <div class="form-group">
             <!-- <label for="file_num">File #</label> -->
             <input required v-model="fileNum" type="number" class="form-control" id="file_num" aria-describedby="file_num_help" placeholder="Enter File #" autofocus>
@@ -25,6 +26,7 @@
           </div>
         </div>
         <div v-if="step == 1" class="form-group">
+          <h2 class="text-center mb-3">Enter confirmation code</h2>
           <!-- <label for="notes_num">Mobile Device Confirmation Code</label> -->
           <input required v-model="notesNum" type="number" class="form-control" id="notes_num" aria-describedby="notes_num_help" placeholder="Enter Confirmation Code" autofocus>
           <small id="notes_num_help" class="form-text text-muted">Found in Notes app of your mission-issued mobile device.</small>
@@ -34,14 +36,14 @@
         <div v-if="step == 2" class="form-group text-center">
           <p v-if="recordFound">Confirmed. Scanning your network...</p>
           <div v-if="!recordFound">
-            <h1>Confirmation code is invalid.</h1>
+            <h2 class="text-center mb-3">Confirmation code is invalid.</h2>
             <pre><code>{{ pid }}</code></pre>
             <p><a href="#" @click.prevent="loadStep(step0, 'Loading...')">Try again</a></p>
           </div>
         </div>
         <div v-if="step == 3" class="form-group text-center">
           <div v-if="recordFound">
-            <h1>Tracking source discovered!</h1>
+            <h2 class="text-center mb-3">Tracking source discovered!</h2>
             <pre><code>id: {{ pid }}</code></pre>
             <h4>View suspected source at <a :href="redirect" @click.prevent="loadStep(step4, 'Redirecting...')">classyllama.com?p={{ pid }}</a></h4>
           </div>
